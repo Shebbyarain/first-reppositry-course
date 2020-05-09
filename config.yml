@@ -1,0 +1,16 @@
+title: First Reppositry
+description: Starting a new and first test
+template:
+  repo: first-reppositry-template
+  name: first-reppositry
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
